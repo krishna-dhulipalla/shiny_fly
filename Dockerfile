@@ -39,6 +39,4 @@ ENV SHINY_HOST=0.0.0.0
 
 EXPOSE 3838
 
-EXPOSE 3838
-
 CMD ["/usr/bin/shiny-server"]
