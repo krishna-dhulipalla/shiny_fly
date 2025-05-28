@@ -1,0 +1,19 @@
+app = "vamsi"  # must match your Fly.io app name (e.g., vamsi)
+
+[env]
+  PORT = "3838"
+
+[build]
+  image = "kdhulipalla/gene-coexpression-app"
+
+[[services]]
+  internal_port = 3838
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
